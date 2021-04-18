@@ -8,4 +8,3 @@
  */
 
 rootProject.name = 'funtional-programming-with-java8-by-venkat'
-include('app')

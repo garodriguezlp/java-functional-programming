@@ -15,6 +15,7 @@ class AppTest {
 
     @Test
     void isPrime() {
+        // assertThat(true, is(true));
         assertAll(
             () -> assertFalse(sut.isPrime(1))
         );
