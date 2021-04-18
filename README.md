@@ -1,3 +1,3 @@
 # Java Functional Programming
 
-My attempt for getting into shape with functional programming with Java
+My attempt to get into shape with functional programming on Java
