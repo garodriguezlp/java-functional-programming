@@ -3,12 +3,20 @@
  */
 package me.garodriguezlp;
 
+import java.util.function.IntPredicate;
+import java.util.stream.IntStream;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        System.out.println("Hello World!!");
+
+    }
+
+    boolean isPrime(int number) {
+        // Lessons from reviewing https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/stream/package-summary.html
+        // Besides the IntStream class, there are also classes like DoubleStream and LongStream
+        IntPredicate divisorOfNumber = divisor -> number % divisor == 0;
+        return number > 1 && IntStream.range(2, number).noneMatch(divisorOfNumber);
     }
 }

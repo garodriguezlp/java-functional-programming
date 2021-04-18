@@ -3,12 +3,20 @@
  */
 package me.garodriguezlp;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+    private App sut = new App();
+
+    @Test
+    void isPrime() {
+        assertAll(
+            () -> assertFalse(sut.isPrime(1))
+        );
     }
 }
